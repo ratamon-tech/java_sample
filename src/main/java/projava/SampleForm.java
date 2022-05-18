@@ -19,8 +19,14 @@ public class SampleForm {
         JButton button = new JButton("大文字");
         frame.add(button);
 
+        JButton button2 = new JButton("小文字");
+        frame.add("East", button2);
+
         button.addActionListener(ae ->
                 text2.setText(text1.getText().toUpperCase()));
+
+        button2.addActionListener(ae ->
+                text1.setText(text2.getText().toLowerCase()));
 
         frame.setVisible(true);
     }
